@@ -24,7 +24,7 @@ export class CylinderService {
   private async sendCalculationRequest(data: any): Promise<string> {
     const requestData = this.sc.encode(JSON.stringify(data));
 
-    const sub = this.client.subscribe('calculateArea2');
+    const sub = this.client.subscribe('calculatedResult');
 
     await this.client.publish('calculateArea', requestData);
 
