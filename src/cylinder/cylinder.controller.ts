@@ -9,7 +9,7 @@ export class CylinderController {
   async calculateArea(
     @Param('radius') radius: number,
     @Param('height') height: number,
-  ): Promise<number> {
+  ) {
     return this.cylinderService.calculateArea(radius, height);
   }
 }
